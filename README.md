@@ -1,4 +1,9 @@
 # 🌐 Anima Browser
+
+<p align="center">
+  <img src="logo.png" alt="Anima Browser Logo" width="200"/>
+</p>
+
 **Modern Enterprise Web Browser with Advanced Media Support**
 
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://www.oracle.com/java/)
