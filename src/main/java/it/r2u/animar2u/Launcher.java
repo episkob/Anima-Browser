@@ -6,8 +6,7 @@ package it.r2u.animar2u;
  */
 public class Launcher {
     public static void main(String[] args) {
-        // Set system properties for JavaFX
-        System.setProperty("javafx.preloader", "");
+        // Set system properties for clean JavaFX startup
         System.setProperty("java.awt.headless", "false");
         
         try {

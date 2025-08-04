@@ -1,61 +1,62 @@
-# Anima R2U Browser 🌐
-**Alpha v0.1.0** - Modern Web Browser built with JavaFX 21
+# Anima Browser
+**Enterprise Web Browser built with JavaFX 21**
 
-## 🚀 Features
-- **Multi-tab browsing** - Open multiple websites simultaneously
-- **Navigation controls** - Back, forward, refresh, home buttons
-- **Smart address bar** - URL navigation and search functionality
-- **Bookmark management** - Save and organize your favorite sites
-- **Browsing history** - Track your web activity
-- **Download manager** - Handle file downloads
-- **Modern UI** - Clean interface with custom CSS styling
+## Overview
+Anima Browser is a modern desktop web browser application built on JavaFX 21 platform. It provides secure web browsing capabilities with enhanced media support and performance optimization.
 
-## 🔧 Technology Stack
-- **JavaFX 21** - Modern desktop application framework
-- **WebView** - Chromium-based web rendering engine
-- **Maven** - Build automation and dependency management
-- **Java Module System** - Modern modular architecture
+## Key Features
+- Multi-tab browsing interface
+- Advanced video codec support (H.264, VP8, VP9, AV1)
+- YouTube and HTML5 media optimization
+- Hardware-accelerated video decoding
+- WebGL and Canvas graphics support
+- Integrated navigation controls
+- Performance-optimized rendering engine
 
-## 🛠️ Build Requirements
-- **Java 21+** (JDK required for building)
-- **Maven 3.6+** (or use included Maven wrapper)
+## Installation
 
-## 📦 Installation & Running
+### Windows Deployment
+Execute the following batch files:
+```
+run-anima.bat      # Full feature deployment
+run-simple.bat     # Standard deployment
+```
 
-### Quick Start
+### Command Line Execution
 ```bash
-# Clone the repository
+java -jar anima-browser.jar
+```
+
+## System Requirements
+- Java Runtime Environment 21 or higher
+- Windows 10/11 operating system
+- Minimum 2GB RAM (4GB recommended)
+- DirectX compatible graphics adapter
+
+## Build Configuration
+```bash
 git clone https://github.com/episkob/Anima-Browser.git
 cd Anima-Browser
-
-# Build the application
-./mvnw clean package
-
-# Run the browser
-java -jar target/anima-browser-1.0-SNAPSHOT.jar
-```
-
-### Alternative builds
-```bash
-# Windows
 mvnw.cmd clean package
-
-# Linux/Mac
-./mvnw clean package
 ```
 
-## 🎯 Development Status
-This is an **Alpha version** with core functionality implemented:
-- ✅ Basic web browsing capabilities
-- ✅ Tab management system
-- ✅ Navigation and bookmarks
-- ✅ Download handling
+## Technical Specifications
 
-## 🤝 Contributing
-This is an early-stage project. Contributions welcome!
+### Performance Optimization
+- G1 Garbage Collection algorithm
+- 2GB heap memory allocation
+- Direct3D GPU acceleration
+- HiDPI display support
+- Optimized video codec processing
 
-## 📄 License
-Open source project - see repository for license details.
+### Media Support
+- Video formats: MP4, WebM, OGG, AVI, MOV, WMV, FLV
+- Audio codecs: AAC, MP3, OGG Vorbis
+- Streaming protocols: YouTube, HTML5 video, WebRTC
+- Graphics rendering: WebGL, Canvas 2D, SVG
+
+## License
+Open source software project
 
 ---
-**Built with ❤️ using JavaFX**
+**Powered by JavaFX 21 Platform**
