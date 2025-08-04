@@ -1,0 +1,162 @@
+/* Anima Browser CSS Styles */
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-color: #f0f0f0;
+}
+
+/* Navigation Bar Styles */
+.navigation-bar {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #c0c0c0;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+}
+
+.nav-button:pressed {
+    -fx-background-color: #d0d0d0;
+}
+
+.nav-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+/* Address Bar Styles */
+.address-bar {
+    -fx-background-color: white;
+    -fx-border-color: #c0c0c0;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 5 15 5 15;
+    -fx-font-size: 13px;
+}
+
+.address-bar:focused {
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 2px;
+}
+
+/* Tab Pane Styles */
+.tab-pane {
+    -fx-background-color: #f0f0f0;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+}
+
+.tab-pane .tab {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1 1 0 1;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-radius: 5 5 0 0;
+    -fx-padding: 5 10 5 10;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #c0c0c0;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-font-weight: bold;
+}
+
+/* Special styling for the "+" tab */
+.tab-pane .tab:last-child {
+    -fx-background-color: #d8d8d8;
+    -fx-min-width: 35px;
+    -fx-max-width: 35px;
+    -fx-padding: 5 5 5 5;
+}
+
+.tab-pane .tab:last-child .tab-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+}
+
+.tab-pane .tab:last-child:hover {
+    -fx-background-color: #c8c8c8;
+}
+
+.tab-pane .tab:last-child:hover .tab-label {
+    -fx-text-fill: #333333;
+}
+
+/* Status Bar Styles */
+.status-bar {
+    -fx-background-color: linear-gradient(to bottom, #e8e8e8, #d0d0d0);
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1 0 0 0;
+    -fx-font-size: 11px;
+}
+
+/* Menu Bar Styles */
+.menu-bar {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.menu-bar .menu .label {
+    -fx-font-size: 12px;
+}
+
+/* WebView Container */
+.web-tab-content {
+    -fx-background-color: white;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Progress Bar */
+.progress-bar {
+    -fx-accent: #4CAF50;
+}
+
+/* Scrollbars */
+.scroll-bar {
+    -fx-background-color: #f0f0f0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #c0c0c0;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #a0a0a0;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}

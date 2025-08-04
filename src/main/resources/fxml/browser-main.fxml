@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="it.r2u.animar2u.ui.controllers.MainBrowserController">
+   
+   <!-- Top: Navigation Bar -->
+   <top>
+      <VBox>
+         <!-- Menu Bar -->
+         <MenuBar fx:id="menuBar">
+            <Menu text="File">
+               <MenuItem text="New Tab" onAction="#onNewTab" accelerator="Ctrl+T"/>
+               <MenuItem text="New Window" onAction="#onNewWindow" accelerator="Ctrl+N"/>
+               <SeparatorMenuItem/>
+               <MenuItem text="Exit" onAction="#onExit" accelerator="Ctrl+Q"/>
+            </Menu>
+            <Menu text="Edit">
+               <MenuItem text="Copy" onAction="#onCopy" accelerator="Ctrl+C"/>
+               <MenuItem text="Paste" onAction="#onPaste" accelerator="Ctrl+V"/>
+               <MenuItem text="Find" onAction="#onFind" accelerator="Ctrl+F"/>
+            </Menu>
+            <Menu text="View">
+               <MenuItem text="Reload" onAction="#onReload" accelerator="F5"/>
+               <MenuItem text="Developer Tools" onAction="#onDevTools" accelerator="F12"/>
+            </Menu>
+            <Menu text="Bookmarks">
+               <MenuItem text="Add Bookmark" onAction="#onAddBookmark" accelerator="Ctrl+D"/>
+               <MenuItem text="Show All Bookmarks" onAction="#onShowBookmarks"/>
+            </Menu>
+         </MenuBar>
+         
+         <!-- Navigation Toolbar -->
+         <HBox spacing="5" styleClass="navigation-bar">
+            <padding>
+               <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+            </padding>
+            
+            <!-- Navigation Buttons -->
+            <Button fx:id="backButton" text="←" onAction="#onBack" styleClass="nav-button"/>
+            <Button fx:id="forwardButton" text="→" onAction="#onForward" styleClass="nav-button"/>
+            <Button fx:id="refreshButton" text="⟳" onAction="#onRefresh" styleClass="nav-button"/>
+            <Button fx:id="homeButton" text="⌂" onAction="#onHome" styleClass="nav-button"/>
+            
+            <!-- Address Bar -->
+            <TextField fx:id="addressBar" promptText="Enter URL or search..." 
+                      HBox.hgrow="ALWAYS" onAction="#onNavigate" styleClass="address-bar"/>
+            
+            <!-- Bookmark Button -->
+            <Button fx:id="bookmarkButton" text="☆" onAction="#onToggleBookmark" styleClass="nav-button"/>
+            
+            <!-- Menu Button -->
+            <MenuButton fx:id="menuButton" text="≡" styleClass="nav-button">
+               <MenuItem text="History" onAction="#onShowHistory"/>
+               <MenuItem text="Downloads" onAction="#onShowDownloads"/>
+               <MenuItem text="Settings" onAction="#onShowSettings"/>
+            </MenuButton>
+         </HBox>
+      </VBox>
+   </top>
+   
+   <!-- Center: Tab Pane with WebViews -->
+   <center>
+      <TabPane fx:id="tabPane" tabClosingPolicy="ALL_TABS">
+         <!-- Tabs will be added dynamically -->
+      </TabPane>
+   </center>
+   
+   <!-- Bottom: Status Bar -->
+   <bottom>
+      <HBox spacing="10" styleClass="status-bar">
+         <padding>
+            <Insets bottom="3.0" left="10.0" right="10.0" top="3.0"/>
+         </padding>
+         <Label fx:id="statusLabel" text="Ready"/>
+         <Region HBox.hgrow="ALWAYS"/>
+         <Label fx:id="progressLabel" text=""/>
+         <ProgressBar fx:id="progressBar" visible="false" prefWidth="100"/>
+      </HBox>
+   </bottom>
+</BorderPane>
