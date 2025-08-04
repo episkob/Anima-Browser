@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import it.r2u.animar2u.ui.controllers.MainBrowserController;
+import it.r2u.animar2u.media.MediaCodecManager;
+import it.r2u.animar2u.media.VideoStreamingOptimizer;
 
 /**
  * Represents a browser tab with WebView functionality
@@ -43,14 +45,16 @@ public class BrowserTab {
      * Configure the WebEngine with optimal settings
      */
     private void configureWebEngine() {
-        // Enable JavaScript
+        // Configure WebView for optimal media playback
+        MediaCodecManager.configureWebViewForMedia(webView);
+        
+        // Apply video streaming optimizations
+        VideoStreamingOptimizer.optimizeForVideoStreaming(webView);
+        
+        // Enable JavaScript (already done in MediaCodecManager, but keeping for clarity)
         webEngine.setJavaScriptEnabled(true);
         
-        // Set user agent to identify as secure browser
-        webEngine.setUserAgent(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-            "(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 AnimaBrowser/1.0"
-        );
+        // User agent is set by VideoStreamingOptimizer for optimal compatibility
     }
     
     /**
@@ -107,6 +111,12 @@ public class BrowserTab {
                         case SUCCEEDED:
                             controller.updateStatus("Ready");
                             controller.updateProgress(-1); // Hide progress bar
+                            
+                            // Apply additional optimizations for video platforms
+                            if (VideoStreamingOptimizer.isVideoStreamingPlatform(currentUrl)) {
+                                System.out.println("Video platform detected: " + currentUrl);
+                                // Additional optimizations are already applied via MediaCodecManager
+                            }
                             break;
                         case FAILED:
                             controller.updateStatus("Failed to load page");
