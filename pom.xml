@@ -63,6 +63,9 @@
                 <configuration>
                     <source>21</source>
                     <target>21</target>
+                    <!-- Отключаем модульную систему для совместимости -->
+                    <fork>true</fork>
+                    <executable>${java.home}/bin/javac</executable>
                 </configuration>
             </plugin>
             

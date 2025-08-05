@@ -3,9 +3,11 @@ module it.r2u.animar2u {
     requires transitive javafx.fxml;
     requires transitive javafx.web;
     requires transitive javafx.graphics;
+    requires transitive javafx.base;
 
-    requires org.controlsfx.controls;
-    requires org.kordamp.ikonli.javafx;
+    // External libraries - могут вызывать проблемы с модулями
+    // requires org.controlsfx.controls;
+    // requires org.kordamp.ikonli.javafx;
 
     opens it.r2u.animar2u to javafx.fxml;
     opens it.r2u.animar2u.ui.controllers to javafx.fxml;
